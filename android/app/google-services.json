@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "213580800543",
+    "firebase_url": "https://reservoir-startuptn-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "reservoir-startuptn",
+    "storage_bucket": "reservoir-startuptn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213580800543:android:d2907a35ffe0eb62cbeb2a",
+        "android_client_info": {
+          "package_name": "com.example.reservoir_startuptn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFLIucPSM0I49CpqleIjr9MMVC36aFSYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
