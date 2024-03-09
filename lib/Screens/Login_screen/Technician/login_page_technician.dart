@@ -3,10 +3,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
+import 'package:reservoir_startuptn/Screens/Login_screen/Technician/forgot_password_page_technician.dart';
+import 'package:reservoir_startuptn/Screens/Main_UI/UI_Components_Technician/bottom_nav_bar_technician.dart';
 import 'package:reservoir_startuptn/Screens/Signup_screen/Technician/signup_page_technician.dart';
-
-import '../../Main_UI/UI_Components_User/bottom_nav_bar_user.dart';
-import '../User/forgot_password_page_user.dart';
 
 bool isDarkMode(BuildContext context) {
   return Theme.of(context).brightness == Brightness.dark;
@@ -20,7 +19,7 @@ class LoginScreenTechnician extends StatefulWidget {
 class _LoginScreenTechnicianState extends State<LoginScreenTechnician> {
   bool _isRememberMeChecked = false;
 
-  String userType = '';
+  String technicianType = '';
   final _auth = FirebaseAuth.instance;
 
   final TextEditingController _emailController = TextEditingController();
@@ -80,7 +79,7 @@ class _LoginScreenTechnicianState extends State<LoginScreenTechnician> {
                     height: 16,
                   ),
                   Text(
-                    "Streamlining tasks, fostering discipline - your student journey begins here",
+                    "Dive into HydroPulse, where community-driven efforts shape a water-resilient future.",
                     style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 14,
@@ -230,7 +229,7 @@ class _LoginScreenTechnicianState extends State<LoginScreenTechnician> {
                           ),
                           TextButton(
                             onPressed: () {
-                              Get.to(() => ForgotPasswordUser());
+                              Get.to(() => ForgotPasswordTechnician());
                             },
                             child: Text(
                               "Forgot Password?",
@@ -327,7 +326,9 @@ class _LoginScreenTechnicianState extends State<LoginScreenTechnician> {
       snackBar("Incorrect password");
     } else if (_emailController.text.trim() == email &&
         _passwordController.text.trim() == password) {
-      Get.to(NavBarUser());
+      Get.to(NavBarTechnician(
+        email: _emailController.text.trim(),
+      ));
     }
   }
 

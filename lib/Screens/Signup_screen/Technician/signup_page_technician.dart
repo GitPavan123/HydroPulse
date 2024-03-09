@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:reservoir_startuptn/Screens/Signup_screen/Technician/otp_verification_page_technician.dart';
 
-import '../../Login_screen/User/login_page_user.dart';
+import '../../Login_screen/technician/login_page_technician.dart';
 
 bool isDarkMode(BuildContext context) {
   return Theme.of(context).brightness == Brightness.dark;
@@ -40,7 +40,7 @@ class _SignupScreenTechnicianState extends State<SignupScreenTechnician> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_rounded),
           onPressed: () {
-            Get.to(() => LoginScreenUser());
+            Get.to(() => LoginScreenTechnician());
           },
         ),
         backgroundColor: Colors.grey.shade900,
@@ -362,7 +362,7 @@ class _SignupScreenTechnicianState extends State<SignupScreenTechnician> {
           // Employee ID does not exist
           snackBar("Employee ID does not exist");
         } else {
-          // Employee ID exists, check email and proceed with user creation
+          // Employee ID exists, check email and proceed with technician creation
           bool isEmailMatch = await checkEmailMatch(
             _eidController.text.trim(),
             _emailController.text.trim(),
@@ -380,7 +380,7 @@ class _SignupScreenTechnicianState extends State<SignupScreenTechnician> {
               // Retrieve the "Name" field from the Firestore document
               String name = await getName(_eidController.text.trim());
 
-              // Create a document with the entered username and pass the name to OTP verification
+              // Create a document with the entered technicianname and pass the name to OTP verification
               Get.to(() => OtpVerificationTechnician(
                     email: _emailController.text.trim(),
                     password: _passwordController.text.trim(),

@@ -7,10 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:mailer/mailer.dart';
-import 'package:mailer/smtp_server.dart';
+import 'package:mailer/smtp_server/gmail.dart';
+import 'package:reservoir_startuptn/Screens/Main_UI/UI_Components_User/bottom_nav_bar_user.dart';
 import 'package:reservoir_startuptn/Screens/Signup_screen/User/signup_page_user.dart';
-
-import '../../Main_UI/UI_Components_User/bottom_nav_bar_user.dart';
 
 class OtpVerificationUser extends StatefulWidget {
   final String email;
@@ -68,11 +67,11 @@ class _OtpVerificationUserState extends State<OtpVerificationUser> {
     sendMail(
         widget.email,
         "E-Mail Verification",
-        """Subject: Verify Your Email Address with EcoSync
+        """Subject: Verify Your Email Address with HydroPulse
 
 Dear $pastEmail,
 
-Thank you for choosing EcoSync. To complete the verification process for your email address, please use the following One-Time Password (OTP) within the next 10 minutes:
+Thank you for choosing HydroPulse. To complete the verification process for your email address, please use the following One-Time Password (OTP) within the next 10 minutes:
 
 OTP: [$otp]
 
@@ -81,7 +80,7 @@ If you did not initiate this verification process, please disregard this email.
 Thank you for your cooperation.
 
 Best Regards,
-The EcoSync Team
+The HydroPulse Team
 
 
 
@@ -202,11 +201,11 @@ The EcoSync Team
                             sendMail(
                                 widget.email,
                                 "E-Mail Verification",
-                                """Subject: Verify Your Email Address with EcoSync
+                                """Subject: Verify Your Email Address with HydroPulse
 
 Dear [recipient email],
 
-Thank you for choosing EcoSync. To complete the verification process for your email address, please use the following One-Time Password (OTP) within the next 10 minutes:
+Thank you for choosing HydroPulse. To complete the verification process for your email address, please use the following One-Time Password (OTP) within the next 10 minutes:
 
 OTP: [$otp]
 
@@ -215,7 +214,7 @@ If you did not initiate this verification process, please disregard this email.
 Thank you for your cooperation.
 
 Best Regards,
-The EcoSync Team
+The HydroPulse Team
 
 
 
@@ -248,7 +247,7 @@ The EcoSync Team
                       if (storedOtp != null) {
                         if (int.parse(storedOtp!) == otp) {
                           await FirebaseFirestore.instance
-                              .collection('Username')
+                              .collection('username')
                               .doc(widget.username)
                               .set({
                             'Name': widget.username,
@@ -259,7 +258,8 @@ The EcoSync Team
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => NavBarUser()),
+                                builder: (context) =>
+                                    NavBarUser(email: widget.email)),
                           );
                         } else {
                           Get.snackbar(
@@ -267,34 +267,25 @@ The EcoSync Team
                             'OTP entered is incorrect',
                             snackPosition: SnackPosition.BOTTOM,
                             margin: EdgeInsets.only(
-                                bottom: 20,
-                                left: 10,
-                                right:
-                                    10), // Adjust the bottom margin as needed
+                                bottom: 20, left: 10, right: 10),
                           );
                         }
                       } else if (storedOtp == null) {
-                        // Handle the case where no OTP is entered with a Snackbar slightly above the bottom
                         Get.snackbar(
                           'Error',
                           'Please enter the OTP',
                           snackPosition: SnackPosition.BOTTOM,
-                          margin: EdgeInsets.only(
-                              bottom: 20,
-                              left: 10,
-                              right: 10), // Adjust the bottom margin as needed
+                          margin:
+                              EdgeInsets.only(bottom: 20, left: 10, right: 10),
                         );
                       }
                     } catch (e) {
-                      // Handle any potential errors during the verification process with a Snackbar slightly above the bottom
                       Get.snackbar(
                         'Error',
                         'Error during OTP verification: $e',
                         snackPosition: SnackPosition.BOTTOM,
-                        margin: EdgeInsets.only(
-                            bottom: 20,
-                            left: 10,
-                            right: 10), // Adjust the bottom margin as needed
+                        margin:
+                            EdgeInsets.only(bottom: 20, left: 10, right: 10),
                       );
                     }
                   },
@@ -317,12 +308,12 @@ The EcoSync Team
   }
 
   void sendMail(String receiverEmail, String title, String description) async {
-    String username = "team.academiq@gmail.com";
-    String password = "vhot mbaf niup yqua";
-    final smtpServer = gmail(username, password);
+    String technicianname = "waterauthoritycoimbatore@gmail.com";
+    String password = "eeka ipln xcsy vvaf";
+    final smtpServer = gmail(technicianname, password);
 
     final message = Message()
-      ..from = Address(username, 'EcoSync')
+      ..from = Address(technicianname, 'Water Authority')
       ..recipients.add(receiverEmail)
       ..subject = title
       ..text = description.replaceAll('[recipient email]', widget.email);
@@ -340,7 +331,7 @@ The EcoSync Team
       'Error',
       '$errorMessage',
       snackPosition: SnackPosition.BOTTOM,
-      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10), //
+      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
     );
   }
 
@@ -349,7 +340,7 @@ The EcoSync Team
       'Success',
       '$errorMessage',
       snackPosition: SnackPosition.BOTTOM,
-      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10), //
+      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
     );
   }
 

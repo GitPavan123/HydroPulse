@@ -1,26 +1,24 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:reservoir_startuptn/Screens/Main_UI/UI_Components_User/bottom_nav_bar_user.dart';
+import 'package:reservoir_startuptn/API/firebase_api.dart';
+import 'package:reservoir_startuptn/Screens/Splash_screen/splash_animation_page.dart';
 
 import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  runApp(Myapp());
+
+  // Initialize Firebase
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  // Initialize FCM
+  await FirebaseApi().initNotifications();
+
+  runApp(MyApp());
 }
 
-class Myapp extends StatefulWidget {
-  const Myapp({super.key});
-
-  @override
-  State<Myapp> createState() => _MyappState();
-}
-
-class _MyappState extends State<Myapp> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -29,7 +27,7 @@ class _MyappState extends State<Myapp> {
       ),
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-      home: NavBarUser(),
+      home: AnimatedSplashScreen(),
     );
   }
 }

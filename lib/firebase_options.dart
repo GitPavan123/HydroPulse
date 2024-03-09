@@ -44,41 +44,37 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDYBR1uelaRS37v2TnC4S-9TC9Smq42Us4',
-    appId: '1:213580800543:web:9acde1d5d683afa0cbeb2a',
-    messagingSenderId: '213580800543',
-    projectId: 'reservoir-startuptn',
-    authDomain: 'reservoir-startuptn.firebaseapp.com',
-    databaseURL: 'https://reservoir-startuptn-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'reservoir-startuptn.appspot.com',
+    apiKey: 'AIzaSyCLWIgZ0pZ06Jbo1-l0dZ5Hhx9xhAJzg6s',
+    appId: '1:570444901671:web:cbaffe3417b79a4f554d02',
+    messagingSenderId: '570444901671',
+    projectId: 'hydropulse-5335a',
+    authDomain: 'hydropulse-5335a.firebaseapp.com',
+    storageBucket: 'hydropulse-5335a.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAFLIucPSM0I49CpqleIjr9MMVC36aFSYU',
-    appId: '1:213580800543:android:d2907a35ffe0eb62cbeb2a',
-    messagingSenderId: '213580800543',
-    projectId: 'reservoir-startuptn',
-    databaseURL: 'https://reservoir-startuptn-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'reservoir-startuptn.appspot.com',
+    apiKey: 'AIzaSyC-iqrRFBv25yVaF9Kv3kdgbnJEtiyYkeo',
+    appId: '1:570444901671:android:bde3d0c1ba15da9b554d02',
+    messagingSenderId: '570444901671',
+    projectId: 'hydropulse-5335a',
+    storageBucket: 'hydropulse-5335a.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCgcc0TUYVel0qUw4HROuOvD3-q35gPDUo',
-    appId: '1:213580800543:ios:4a74236f72225d41cbeb2a',
-    messagingSenderId: '213580800543',
-    projectId: 'reservoir-startuptn',
-    databaseURL: 'https://reservoir-startuptn-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'reservoir-startuptn.appspot.com',
+    apiKey: 'AIzaSyDyWx7XpHFKq9HYNFo-LdU0M7sf5WPTOTI',
+    appId: '1:570444901671:ios:2049b567a8965006554d02',
+    messagingSenderId: '570444901671',
+    projectId: 'hydropulse-5335a',
+    storageBucket: 'hydropulse-5335a.appspot.com',
     iosBundleId: 'com.example.reservoirStartuptn',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCgcc0TUYVel0qUw4HROuOvD3-q35gPDUo',
-    appId: '1:213580800543:ios:8ab9f74cd5af570fcbeb2a',
-    messagingSenderId: '213580800543',
-    projectId: 'reservoir-startuptn',
-    databaseURL: 'https://reservoir-startuptn-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'reservoir-startuptn.appspot.com',
+    apiKey: 'AIzaSyDyWx7XpHFKq9HYNFo-LdU0M7sf5WPTOTI',
+    appId: '1:570444901671:ios:32b6dab615409076554d02',
+    messagingSenderId: '570444901671',
+    projectId: 'hydropulse-5335a',
+    storageBucket: 'hydropulse-5335a.appspot.com',
     iosBundleId: 'com.example.reservoirStartuptn.RunnerTests',
   );
 }

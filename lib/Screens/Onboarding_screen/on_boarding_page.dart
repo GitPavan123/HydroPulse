@@ -73,7 +73,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           duration: Duration(milliseconds: 300),
                         );
                         if (_pageindex == demo_data.length - 1) {
-                          // Navigate to the LoginScreen
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -144,19 +143,19 @@ class Onboard {
 final List<Onboard> demo_data = [
   Onboard(
       image: "assets/on_boarding_screen/efficient_academic_management.png",
-      title: "Efficient Academic Management",
+      title: " Crisis-Ready Solutions",
       description:
-          "Streamline tasks, grades and resources for \n optimized academic performance"),
+          "Swiftly respond to emergencies, map the system, and empower communities for water resilience."),
   Onboard(
       image: "assets/on_boarding_screen/track_engage_assess.png",
-      title: "Track, Engage and  Assess",
+      title: "Sustainable Water Management",
       description:
-          "Simplify your daily college chores, from assignments to errands, with our user-friendly app"),
+          "Efficiently map, monitor, and engage—empowering Coimbatore for a sustainable water future."),
   Onboard(
     image: "assets/on_boarding_screen/intellectual_apptitude_metric.png",
-    title: "Intellectual Aptitude Metric",
+    title: "Data-Driven Water Stewardship",
     description:
-        "Assess overall student conduct and engagement for \ncomprehensive credit evaluation",
+        "Unlock swift responses, sustainable planning, and community engagement through data insights.",
   )
 ];
 
@@ -179,25 +178,24 @@ class OnBoardingContent extends StatelessWidget {
         if (image == demo_data[2].image)
           Image.asset(
             image,
-            width: 320, // Adjust the width as per your requirement
-            height: 500, // Adjust the height as per your requirement
+            width: 320,
+            height: 500,
           )
         else if (image == demo_data[1].image)
           Padding(
-            padding: const EdgeInsets.only(
-                top: 0), // Adjust the top padding for the second image
+            padding: const EdgeInsets.only(top: 0),
             child: Image.asset(
               image,
-              width: 320, // Decrease the width for the second image
-              height: 500, // Decrease the height for the second image
+              width: 320,
+              height: 500,
             ),
           )
         else
           Container(
             child: Image.asset(
               image,
-              width: 300, // Default width for other screens
-              height: 500, // Default height for other screens
+              width: 300,
+              height: 500,
             ),
           ),
         SizedBox(

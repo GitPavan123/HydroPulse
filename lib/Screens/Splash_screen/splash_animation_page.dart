@@ -21,8 +21,6 @@ class _AnimatedSplashScreenState extends State<AnimatedSplashScreen>
     _animationController.forward();
     _animationController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        // Navigate to the next screen after the animation has completed.
-        // You can replace the next line with your desired route.
         Navigator.pushReplacement(
           context,
           PageRouteBuilder(
@@ -56,7 +54,7 @@ class _AnimatedSplashScreenState extends State<AnimatedSplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade900, // or any color you prefer
+      backgroundColor: Colors.grey.shade900,
       body: Center(
         child: FadeTransition(
           opacity: _animationController,

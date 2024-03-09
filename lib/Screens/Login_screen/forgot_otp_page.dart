@@ -7,8 +7,7 @@ import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server/gmail.dart';
-
-import 'User/login_page_user.dart';
+import 'package:reservoir_startuptn/Screens/Login_screen/User/login_page_user.dart';
 
 class ForgotOTP extends StatefulWidget {
   final String email;
@@ -244,34 +243,25 @@ The EcoSync Team
                             'OTP entered is incorrect',
                             snackPosition: SnackPosition.BOTTOM,
                             margin: EdgeInsets.only(
-                                bottom: 20,
-                                left: 10,
-                                right:
-                                    10), // Adjust the bottom margin as needed
+                                bottom: 20, left: 10, right: 10),
                           );
                         }
                       } else if (storedOtp == null) {
-                        // Handle the case where no OTP is entered with a Snackbar slightly above the bottom
                         Get.snackbar(
                           'Error',
                           'Please enter the OTP',
                           snackPosition: SnackPosition.BOTTOM,
-                          margin: EdgeInsets.only(
-                              bottom: 20,
-                              left: 10,
-                              right: 10), // Adjust the bottom margin as needed
+                          margin:
+                              EdgeInsets.only(bottom: 20, left: 10, right: 10),
                         );
                       }
                     } catch (e) {
-                      // Handle any potential errors during the verification process with a Snackbar slightly above the bottom
                       Get.snackbar(
                         'Error',
                         'Error during OTP verification: $e',
                         snackPosition: SnackPosition.BOTTOM,
-                        margin: EdgeInsets.only(
-                            bottom: 20,
-                            left: 10,
-                            right: 10), // Adjust the bottom margin as needed
+                        margin:
+                            EdgeInsets.only(bottom: 20, left: 10, right: 10),
                       );
                     }
                   },
@@ -298,7 +288,7 @@ The EcoSync Team
       'Error',
       '$errorMessage',
       snackPosition: SnackPosition.BOTTOM,
-      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10), //
+      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
     );
   }
 
@@ -307,7 +297,7 @@ The EcoSync Team
       '',
       '$errorMessage',
       snackPosition: SnackPosition.BOTTOM,
-      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10), //
+      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
     );
   }
 
@@ -317,12 +307,12 @@ The EcoSync Team
   }
 
   void sendMail(String receiverEmail, String title, String description) async {
-    String username = "team.academiq@gmail.com";
+    String technicianname = "team.academiq@gmail.com";
     String password = "vhot mbaf niup yqua";
-    final smtpServer = gmail(username, password);
+    final smtpServer = gmail(technicianname, password);
 
     final message = Message()
-      ..from = Address(username, 'Reservoir_StartupTn')
+      ..from = Address(technicianname, 'reservoir_startuptn')
       ..recipients.add(receiverEmail)
       ..subject = title
       ..text = description.replaceAll('[recipient email]', widget.email);

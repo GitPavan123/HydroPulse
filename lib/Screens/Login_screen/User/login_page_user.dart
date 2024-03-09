@@ -2,10 +2,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
+import 'package:reservoir_startuptn/Screens/Login_screen/User/forgot_password_page_user.dart';
+import 'package:reservoir_startuptn/Screens/Main_UI/UI_Components_User/bottom_nav_bar_user.dart';
 
-import '../../Main_UI/UI_Components_User/bottom_nav_bar_user.dart';
 import '../../Signup_screen/User/signup_page_user.dart';
-import 'forgot_password_page_user.dart';
 
 bool isDarkMode(BuildContext context) {
   return Theme.of(context).brightness == Brightness.dark;
@@ -19,7 +19,7 @@ class LoginScreenUser extends StatefulWidget {
 class _LoginScreenUserState extends State<LoginScreenUser> {
   bool _isRememberMeChecked = false;
 
-  String userType = '';
+  String technicianType = '';
   final _auth = FirebaseAuth.instance;
 
   final TextEditingController _emailController = TextEditingController();
@@ -79,7 +79,7 @@ class _LoginScreenUserState extends State<LoginScreenUser> {
                     height: 16,
                   ),
                   Text(
-                    "Streamlining tasks, fostering discipline - your student journey begins here",
+                    "Dive into HydroPulse, where community-driven efforts shape a water-resilient future.",
                     style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 14,
@@ -206,8 +206,7 @@ class _LoginScreenUserState extends State<LoginScreenUser> {
                                 height: 40,
                                 child: Checkbox(
                                   activeColor: Colors.blue.shade900,
-                                  value:
-                                      _isRememberMeChecked, // Use the boolean variable here
+                                  value: _isRememberMeChecked,
                                   onChanged: (value) {
                                     setState(() {
                                       _isRememberMeChecked = value!;
@@ -307,7 +306,9 @@ class _LoginScreenUserState extends State<LoginScreenUser> {
       await _auth.signInWithEmailAndPassword(
           email: _emailController.text, password: _passwordController.text);
 
-      Get.to(NavBarUser());
+      Get.to(NavBarUser(
+        email: _emailController.text.trim(),
+      ));
     } on FirebaseAuthException catch (e) {
       if (_emailController.text.isEmpty && _passwordController.text.isEmpty) {
         snackBar('Please enter the E-Mail and Password');
@@ -330,7 +331,7 @@ class _LoginScreenUserState extends State<LoginScreenUser> {
       'Error',
       '$errorMessage',
       snackPosition: SnackPosition.BOTTOM,
-      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10), //
+      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
     );
   }
 }

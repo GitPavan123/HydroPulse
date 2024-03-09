@@ -319,7 +319,6 @@ class _SignupScreenUserState extends State<SignupScreenUser> {
                           child: ElevatedButton(
                             onPressed: _isRememberMeChecked
                                 ? () async {
-                                    // Perform remember me logic
                                     signup();
                                   }
                                 : null,
@@ -353,25 +352,19 @@ class _SignupScreenUserState extends State<SignupScreenUser> {
           _passwordController.text.trim().isEmpty) {
         snackBar("Please enter all the fields");
       } else if (isPasswordStrong(_passwordController.text.trim())) {
-        // Check if the username already exists
-        bool usernameExists =
+        bool UsernameExists =
             await checkUsernameExists(_unameController.text.trim());
 
-        if (usernameExists) {
-          // Username is already in use
+        if (UsernameExists) {
           snackBar("Username is already in use");
         } else {
-          // Username is available, proceed with user creation
           UserCredential userCredential =
               await _auth.createUserWithEmailAndPassword(
             email: _emailController.text.trim(),
             password: _passwordController.text.trim(),
           );
 
-          // Get the UID of the user created
           String uid = userCredential.user!.uid;
-
-          // Create a document with the entered username
 
           Get.to(() => OtpVerificationUser(
                 email: _emailController.text.trim(),
@@ -401,11 +394,10 @@ class _SignupScreenUserState extends State<SignupScreenUser> {
     }
   }
 
-  Future<bool> checkUsernameExists(String username) async {
-    // Check if the username already exists in the "Username" collection
+  Future<bool> checkUsernameExists(String Username) async {
     DocumentSnapshot documentSnapshot = await FirebaseFirestore.instance
         .collection('Username')
-        .doc(username)
+        .doc(Username)
         .get();
 
     return documentSnapshot.exists;
@@ -431,7 +423,7 @@ class _SignupScreenUserState extends State<SignupScreenUser> {
       'Error',
       '$errorMessage',
       snackPosition: SnackPosition.BOTTOM,
-      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10), //
+      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
     );
   }
 
@@ -440,7 +432,7 @@ class _SignupScreenUserState extends State<SignupScreenUser> {
       'Password Error',
       '$errorMessage',
       snackPosition: SnackPosition.BOTTOM,
-      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10), //
+      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
     );
   }
 }

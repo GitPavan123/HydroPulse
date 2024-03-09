@@ -7,10 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:mailer/mailer.dart';
-import 'package:mailer/smtp_server.dart';
+import 'package:mailer/smtp_server/gmail.dart';
+import 'package:reservoir_startuptn/Screens/Main_UI/UI_Components_Technician/bottom_nav_bar_technician.dart';
 import 'package:reservoir_startuptn/Screens/Signup_screen/User/signup_page_user.dart';
-
-import '../../Main_UI/UI_Components_User/bottom_nav_bar_user.dart';
 
 class OtpVerificationTechnician extends StatefulWidget {
   final String email;
@@ -70,11 +69,11 @@ class _OtpVerificationTechnicianState extends State<OtpVerificationTechnician> {
 
     String pastEmail = widget.email;
     sendMail(widget.email, "E-Mail Verification",
-        """Subject: Verify Your Email Address with EcoSync
+        """Subject: Verify Your Email Address with HydroPulse
 
 Dear $pastEmail,
 
-Thank you for choosing EcoSync. To complete the verification process for your email address, please use the following One-Time Password (OTP) within the next 10 minutes:
+Thank you for choosing HydroPulse. To complete the verification process for your email address, please use the following One-Time Password (OTP) within the next 10 minutes:
 
 OTP: [$otp]
 
@@ -83,7 +82,7 @@ If you did not initiate this verification process, please disregard this email.
 Thank you for your cooperation.
 
 Best Regards,
-The EcoSync Team
+The HydroPulse Team
 """);
     startTimer();
   }
@@ -196,11 +195,11 @@ The EcoSync Team
                             otp = generateSixDigitRandomNumber();
 
                             sendMail(widget.email, "E-Mail Verification",
-                                """Subject: Verify Your Email Address with EcoSync
+                                """Subject: Verify Your Email Address with HydroPulse
 
 Dear [recipient email],
 
-Thank you for choosing EcoSync. To complete the verification process for your email address, please use the following One-Time Password (OTP) within the next 10 minutes:
+Thank you for choosing HydroPulse. To complete the verification process for your email address, please use the following One-Time Password (OTP) within the next 10 minutes:
 
 OTP: [$otp]
 
@@ -209,7 +208,7 @@ If you did not initiate this verification process, please disregard this email.
 Thank you for your cooperation.
 
 Best Regards,
-The EcoSync Team
+The HydroPulse Team
 """);
                             startTimer();
                             isResendButtonDisabled = true;
@@ -246,7 +245,9 @@ The EcoSync Team
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => NavBarUser(),
+                              builder: (context) => NavBarTechnician(
+                                email: widget.email,
+                              ),
                             ),
                           );
                         } else {
@@ -296,12 +297,12 @@ The EcoSync Team
   }
 
   void sendMail(String receiverEmail, String title, String description) async {
-    String username = "team.academiq@gmail.com";
-    String password = "vhot mbaf niup yqua";
-    final smtpServer = gmail(username, password);
+    String technicianname = "waterauthoritycoimbatore@gmail.com";
+    String password = "eeka ipln xcsy vvaf";
+    final smtpServer = gmail(technicianname, password);
 
     final message = Message()
-      ..from = Address(username, 'EcoSync')
+      ..from = Address(technicianname, 'Water Authority')
       ..recipients.add(receiverEmail)
       ..subject = title
       ..text = description.replaceAll('[recipient email]', widget.email);

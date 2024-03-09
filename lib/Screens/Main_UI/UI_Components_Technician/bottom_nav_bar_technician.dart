@@ -2,24 +2,24 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
-import 'package:reservoir_startuptn/Screens/Main_UI/UI_Components_User/settings_user.dart';
+import 'package:reservoir_startuptn/Screens/Main_UI/UI_Components_Technician/settings_technician.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
-import 'Drawer_User/new_connection_user.dart';
-import 'Drawer_User/water_bill_user.dart';
-import 'Drawer_User/yearly_maintenance_user.dart';
-import 'map_ui_user.dart';
-import 'notice_user.dart';
+import '../UI_Components_User/Drawer_User/water_bill_user.dart';
+import 'Drawer_Technician/new_connection_Technician.dart';
+import 'Drawer_Technician/yearly_maintenance_technician.dart';
+import 'map_ui_technician.dart';
+import 'notice_technician.dart';
 
-class NavBarUser extends StatefulWidget {
+class NavBarTechnician extends StatefulWidget {
   final String email;
 
-  NavBarUser({required this.email});
+  NavBarTechnician({required this.email});
   @override
-  _NavBarUserState createState() => _NavBarUserState();
+  _NavBarTechnicianState createState() => _NavBarTechnicianState();
 }
 
-class _NavBarUserState extends State<NavBarUser> {
+class _NavBarTechnicianState extends State<NavBarTechnician> {
   int selectedItem = 0;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -87,11 +87,11 @@ class _NavBarUserState extends State<NavBarUser> {
   Widget _getPage(int index) {
     switch (index) {
       case 0:
-        return MapPageUser(email: widget.email);
+        return MapPageTechnician(email: widget.email);
       case 1:
-        return NoticePageUser();
+        return NoticePageTechnician(email: widget.email);
       case 2:
-        return SettingsPageUser();
+        return SettingsPageTechnician();
       default:
         return Container();
     }
@@ -265,7 +265,8 @@ class _NavBarDrawerState extends State<NavBarDrawer> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => YearlyMaintenanceUser()),
+                                builder: (context) =>
+                                    YearlyMaintenanceTechnician()),
                           );
                         },
                       ),
@@ -280,7 +281,8 @@ class _NavBarDrawerState extends State<NavBarDrawer> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => NewConnectionUser()),
+                                builder: (context) =>
+                                    NewConnectionTechnician()),
                           );
                         },
                       ),

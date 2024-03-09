@@ -12,16 +12,16 @@ import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server/gmail.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class MapPageUser extends StatefulWidget {
+class MapPageTechnician extends StatefulWidget {
   final String email;
 
-  const MapPageUser({Key? key, required this.email}) : super(key: key);
+  const MapPageTechnician({Key? key, required this.email}) : super(key: key);
 
   @override
-  State<MapPageUser> createState() => _MapPageUserState();
+  State<MapPageTechnician> createState() => _MapPageTechnicianState();
 }
 
-class _MapPageUserState extends State<MapPageUser> {
+class _MapPageTechnicianState extends State<MapPageTechnician> {
   PickedFile? _pickedImage;
   Completer<GoogleMapController> _controller = Completer();
 
@@ -1776,14 +1776,7 @@ void _showHistoryPopup2(BuildContext context) {
   );
 }
 
-int generateRandomNumber(int min, int max) {
-  final random = Random();
-  return min + random.nextInt(max - min + 1);
-}
-
 void _showHistoryPopup3(BuildContext context, String email) {
-  int randomVelocity = generateRandomNumber(18, 22);
-
   showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -1808,7 +1801,7 @@ void _showHistoryPopup3(BuildContext context, String email) {
                     children: [
                       Row(children: [
                         Text(
-                          '  Velocity: $randomVelocity m/s',
+                          "  Velocity : 21 m/s",
                           style: TextStyle(
                               fontWeight: FontWeight.w700, fontSize: 24),
                         )
@@ -2202,12 +2195,12 @@ String generateRandomSixDigitNumber() {
 }
 
 void sendMail(String receiverEmail, String title, String description) async {
-  String Username = "waterauthoritycoimbatore@gmail.com";
+  String technicianname = "waterauthoritycoimbatore@gmail.com";
   String password = "eeka ipln xcsy vvaf";
-  final smtpServer = gmail(Username, password);
+  final smtpServer = gmail(technicianname, password);
 
   final message = Message()
-    ..from = Address(Username, 'Water Authority')
+    ..from = Address(technicianname, 'Water Authority')
     ..recipients.add(receiverEmail)
     ..subject = title
     ..text = description.replaceAll('[recipient email]', receiverEmail);

@@ -1,14 +1,13 @@
 {
   "project_info": {
-    "project_number": "213580800543",
-    "firebase_url": "https://reservoir-startuptn-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "reservoir-startuptn",
-    "storage_bucket": "reservoir-startuptn.appspot.com"
+    "project_number": "570444901671",
+    "project_id": "hydropulse-5335a",
+    "storage_bucket": "hydropulse-5335a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:213580800543:android:d2907a35ffe0eb62cbeb2a",
+        "mobilesdk_app_id": "1:570444901671:android:bde3d0c1ba15da9b554d02",
         "android_client_info": {
           "package_name": "com.example.reservoir_startuptn"
         }
@@ -16,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAFLIucPSM0I49CpqleIjr9MMVC36aFSYU"
+          "current_key": "AIzaSyC-iqrRFBv25yVaF9Kv3kdgbnJEtiyYkeo"
         }
       ],
       "services": {

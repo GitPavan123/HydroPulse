@@ -2,9 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
+import 'package:reservoir_startuptn/Screens/Login_screen/User/login_page_user.dart';
 
 import '../forgot_otp_page.dart';
-import 'login_page_user.dart';
 
 class ForgotPasswordUser extends StatefulWidget {
   const ForgotPasswordUser({super.key});
@@ -177,7 +177,7 @@ class _ForgotPasswordUserState extends State<ForgotPasswordUser> {
       'Error',
       '$errorMessage',
       snackPosition: SnackPosition.BOTTOM,
-      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10), //
+      margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
     );
   }
 }
