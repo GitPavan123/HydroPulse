@@ -1,4 +1,4 @@
-name: reservoir_startuptn
+name: insurance_Dapp
 description: "Reservoir management and monitoring system"
 publish_to: 'none'
 
@@ -18,7 +18,7 @@ dependencies:
   get: ^4.6.6
   firebase_core: ^2.25.4
   firebase_auth: 4.15.0
-  firebase_messaging: ^14.7.16
+  firebase_messaging: ^14.7.19
   flutter_otp_text_field: ^1.1.1
   mailer: ^6.0.1
   google_fonts: ^6.1.0

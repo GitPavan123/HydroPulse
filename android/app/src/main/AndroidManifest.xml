@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="reservoir_startuptn"
+        android:label="insurance_Dapp"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -30,9 +30,10 @@
             android:name="flutterEmbedding"
             android:value="2" />
         <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAFLIucPSM0I49CpqleIjr9MMVC36aFSYU"/>
+            android:value="AIzaSyBrefDf5X31OtI0kRXHZsADODioPoXGXes"/>
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="high_importance_channel"/>
+
     </application>
 </manifest>

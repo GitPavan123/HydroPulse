@@ -8,8 +8,8 @@ import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server/gmail.dart';
-import 'package:reservoir_startuptn/Screens/Main_UI/UI_Components_Technician/bottom_nav_bar_technician.dart';
-import 'package:reservoir_startuptn/Screens/Signup_screen/User/signup_page_user.dart';
+import 'package:insurance_Dapp/Screens/Main_UI/UI_Components_Technician/bottom_nav_bar_technician.dart';
+import 'package:insurance_Dapp/Screens/Signup_screen/User/signup_page_user.dart';
 
 class OtpVerificationTechnician extends StatefulWidget {
   final String email;

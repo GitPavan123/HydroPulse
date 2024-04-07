@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyCgcc0TUYVel0qUw4HROuOvD3-q35gPDUo</string>
+	<string>AIzaSyCIed_0S0oSRbG7ju1b3QQQ_Wl0EjOznOw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>213580800543</string>
+	<string>473388777199</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.reservoirStartuptn.RunnerTests</string>
+	<string>com.example.reservoirStartuptn</string>
 	<key>PROJECT_ID</key>
-	<string>reservoir-startuptn</string>
+	<string>reservoir-technician</string>
 	<key>STORAGE_BUCKET</key>
-	<string>reservoir-startuptn.appspot.com</string>
+	<string>reservoir-technician.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:213580800543:ios:8ab9f74cd5af570fcbeb2a</string>
+	<string>1:473388777199:ios:088c634360d1dfeceba51a</string>
 </dict>
 </plist>

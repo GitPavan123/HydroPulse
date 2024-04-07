@@ -1,4 +1,4 @@
-package com.example.reservoir_startuptn;
+package com.example.insurance_Dapp;
 
 import io.flutter.embedding.android.FlutterActivity;
 

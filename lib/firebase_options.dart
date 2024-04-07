@@ -17,15 +17,24 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -43,38 +52,11 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCLWIgZ0pZ06Jbo1-l0dZ5Hhx9xhAJzg6s',
-    appId: '1:570444901671:web:cbaffe3417b79a4f554d02',
-    messagingSenderId: '570444901671',
-    projectId: 'hydropulse-5335a',
-    authDomain: 'hydropulse-5335a.firebaseapp.com',
-    storageBucket: 'hydropulse-5335a.appspot.com',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC-iqrRFBv25yVaF9Kv3kdgbnJEtiyYkeo',
-    appId: '1:570444901671:android:bde3d0c1ba15da9b554d02',
-    messagingSenderId: '570444901671',
-    projectId: 'hydropulse-5335a',
-    storageBucket: 'hydropulse-5335a.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDyWx7XpHFKq9HYNFo-LdU0M7sf5WPTOTI',
-    appId: '1:570444901671:ios:2049b567a8965006554d02',
-    messagingSenderId: '570444901671',
-    projectId: 'hydropulse-5335a',
-    storageBucket: 'hydropulse-5335a.appspot.com',
-    iosBundleId: 'com.example.reservoirStartuptn',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDyWx7XpHFKq9HYNFo-LdU0M7sf5WPTOTI',
-    appId: '1:570444901671:ios:32b6dab615409076554d02',
-    messagingSenderId: '570444901671',
-    projectId: 'hydropulse-5335a',
-    storageBucket: 'hydropulse-5335a.appspot.com',
-    iosBundleId: 'com.example.reservoirStartuptn.RunnerTests',
+    apiKey: 'AIzaSyBntwC-Sj88PSqdDhgL3pSzaoCM6IkXoVg',
+    appId: '1:443517054861:android:1129f6281b9b67071857c4',
+    messagingSenderId: '443517054861',
+    projectId: 'pnb-metlife-f944c',
+    storageBucket: 'pnb-metlife-f944c.appspot.com',
   );
 }

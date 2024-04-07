@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
-import 'package:reservoir_startuptn/Screens/Login_screen/User/login_page_user.dart';
+import 'package:insurance_Dapp/Screens/Login_screen/User/login_page_user.dart';
 
 import '../forgot_otp_page.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:reservoir_startuptn/Screens/Login_screen/technician_consumer_page.dart';
+import 'package:insurance_Dapp/Screens/Login_screen/technician_consumer_page.dart';
 
 bool isDarkMode(BuildContext context) {
   return Theme.of(context).brightness == Brightness.dark;

@@ -102,7 +102,7 @@ class _WaterBilltechnicianState extends State<WaterBilltechnician> {
                       children: [
                         SizedBox(height: 27),
                         Text(
-                          "Daily limit: 2000 litres",
+                          "Coverage Type : Comprehensive",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
@@ -111,7 +111,7 @@ class _WaterBilltechnicianState extends State<WaterBilltechnician> {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          "       Water utilized : 1400 litres",
+                          "Coverage Amount : 30000 INR",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
@@ -120,7 +120,7 @@ class _WaterBilltechnicianState extends State<WaterBilltechnician> {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          "    Litres Exceeded : 0 litres",
+                          "Policy Number : PS3T12",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
@@ -168,7 +168,7 @@ class _WaterBilltechnicianState extends State<WaterBilltechnician> {
                     Column(
                       children: [
                         Text(
-                          "        Amount",
+                          "      Amount",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
@@ -176,7 +176,7 @@ class _WaterBilltechnicianState extends State<WaterBilltechnician> {
                           ),
                         ),
                         Text(
-                          "        240 INR",
+                          "      7800 INR",
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 20,
@@ -204,7 +204,7 @@ class _WaterBilltechnicianState extends State<WaterBilltechnician> {
                         ),
                         SizedBox(height: 0),
                         Text(
-                          "   03-02-2024",
+                          "   13-04-2024",
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 20,
@@ -226,7 +226,7 @@ class _WaterBilltechnicianState extends State<WaterBilltechnician> {
                 Row(
                   children: [
                     Text(
-                      "     Your ₹240 bill is due in 6 days.",
+                      "     Your ₹7800 bill is due in 6 days.",
                       style: TextStyle(
                         fontWeight: FontWeight.w900,
                         fontSize: 14,
@@ -332,7 +332,7 @@ void _showHistoryPopup(BuildContext context) {
                                 fontSize: 14,
                                 color: Colors.white,
                               )),
-                          Text("  Litres exceeded : 23",
+                          Text("  Margin : ₹750",
                               style: TextStyle(
                                 fontWeight: FontWeight.w900,
                                 fontSize: 14,
@@ -341,12 +341,6 @@ void _showHistoryPopup(BuildContext context) {
                         ],
                       ),
                       SizedBox(width: 16),
-                      Text("₹ 7.2",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            fontSize: 14,
-                            color: Colors.white,
-                          )),
                     ],
                   ),
                   width: 270,
@@ -385,7 +379,7 @@ void _showHistoryPopup(BuildContext context) {
                                 fontSize: 14,
                                 color: Colors.white,
                               )),
-                          Text("  Litres exceeded : 17",
+                          Text("  Margin : ₹1700",
                               style: TextStyle(
                                 fontWeight: FontWeight.w900,
                                 fontSize: 14,
@@ -394,12 +388,6 @@ void _showHistoryPopup(BuildContext context) {
                         ],
                       ),
                       SizedBox(width: 16),
-                      Text("₹ 6.7",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            fontSize: 14,
-                            color: Colors.white,
-                          )),
                     ],
                   ),
                   width: 270,
@@ -438,7 +426,7 @@ void _showHistoryPopup(BuildContext context) {
                                 fontSize: 14,
                                 color: Colors.white,
                               )),
-                          Text("  Litres exceeded : 0",
+                          Text("  Margin : ₹500",
                               style: TextStyle(
                                 fontWeight: FontWeight.w900,
                                 fontSize: 14,
@@ -447,12 +435,6 @@ void _showHistoryPopup(BuildContext context) {
                         ],
                       ),
                       SizedBox(width: 16),
-                      Text("  ₹ 0.0",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            fontSize: 14,
-                            color: Colors.white,
-                          )),
                     ],
                   ),
                   width: 270,
@@ -491,7 +473,7 @@ void _showHistoryPopup(BuildContext context) {
                                 fontSize: 14,
                                 color: Colors.white,
                               )),
-                          Text("  Litres exceeded : 16",
+                          Text("  Margin : ₹160",
                               style: TextStyle(
                                 fontWeight: FontWeight.w900,
                                 fontSize: 14,
@@ -500,12 +482,6 @@ void _showHistoryPopup(BuildContext context) {
                         ],
                       ),
                       SizedBox(width: 16),
-                      Text("₹ 6.7",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            fontSize: 14,
-                            color: Colors.white,
-                          )),
                     ],
                   ),
                   width: 270,
@@ -544,7 +520,7 @@ void _showHistoryPopup(BuildContext context) {
                                 fontSize: 14,
                                 color: Colors.white,
                               )),
-                          Text("  Litres exceeded : 27",
+                          Text("  Margin : ₹270",
                               style: TextStyle(
                                 fontWeight: FontWeight.w900,
                                 fontSize: 14,
@@ -553,12 +529,6 @@ void _showHistoryPopup(BuildContext context) {
                         ],
                       ),
                       SizedBox(width: 16),
-                      Text("₹ 8.4",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            fontSize: 14,
-                            color: Colors.white,
-                          )),
                     ],
                   ),
                   width: 270,
@@ -597,7 +567,7 @@ void _showHistoryPopup(BuildContext context) {
                                 fontSize: 14,
                                 color: Colors.white,
                               )),
-                          Text("  Litres exceeded : 9",
+                          Text("  Margin : ₹900",
                               style: TextStyle(
                                 fontWeight: FontWeight.w900,
                                 fontSize: 14,
@@ -606,12 +576,6 @@ void _showHistoryPopup(BuildContext context) {
                         ],
                       ),
                       SizedBox(width: 16),
-                      Text("  ₹ 3.2",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            fontSize: 14,
-                            color: Colors.white,
-                          )),
                     ],
                   ),
                   width: 270,
@@ -650,7 +614,7 @@ void _showHistoryPopup(BuildContext context) {
                                 fontSize: 14,
                                 color: Colors.white,
                               )),
-                          Text("  Litres exceeded : 23",
+                          Text("  Margin : ₹230",
                               style: TextStyle(
                                 fontWeight: FontWeight.w900,
                                 fontSize: 14,
@@ -659,12 +623,6 @@ void _showHistoryPopup(BuildContext context) {
                         ],
                       ),
                       SizedBox(width: 16),
-                      Text("₹ 7.2",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            fontSize: 14,
-                            color: Colors.white,
-                          )),
                     ],
                   ),
                   width: 270,
@@ -703,7 +661,7 @@ void _showHistoryPopup(BuildContext context) {
                                 fontSize: 14,
                                 color: Colors.white,
                               )),
-                          Text("  Litres exceeded : 20",
+                          Text("  Margin : ₹1200",
                               style: TextStyle(
                                 fontWeight: FontWeight.w900,
                                 fontSize: 14,
@@ -712,12 +670,6 @@ void _showHistoryPopup(BuildContext context) {
                         ],
                       ),
                       SizedBox(width: 16),
-                      Text("₹ 7.0",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            fontSize: 14,
-                            color: Colors.white,
-                          )),
                     ],
                   ),
                   width: 270,

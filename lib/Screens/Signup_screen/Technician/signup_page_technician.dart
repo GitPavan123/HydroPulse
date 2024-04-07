@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
-import 'package:reservoir_startuptn/Screens/Signup_screen/Technician/otp_verification_page_technician.dart';
+import 'package:insurance_Dapp/Screens/Signup_screen/Technician/otp_verification_page_technician.dart';
 
 import '../../Login_screen/technician/login_page_technician.dart';
 

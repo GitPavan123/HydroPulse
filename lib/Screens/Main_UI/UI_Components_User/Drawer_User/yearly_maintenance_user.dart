@@ -15,16 +15,16 @@ class YearlyMaintenanceUser extends StatefulWidget {
 class _YearlyMaintenanceUserState extends State<YearlyMaintenanceUser> {
   List<String> selectedOptions = [];
   List<String> dropdownOptions = [
-    'Overhead Tank',
-    'Sump',
-    'Pipeline cleaning',
+    'Health',
+    'Vehicle',
+    'Home',
     // Add more options as needed
   ];
 
   Map<String, double> optionPrices = {
-    'Overhead Tank': 500.0,
-    'Sump': 1000.0,
-    'Pipeline cleaning': 1200.0,
+    'Health': 50000,
+    'Vehicle': 10000,
+    'Home': 1200000,
     // Add more options and prices as needed
   };
 

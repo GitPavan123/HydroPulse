@@ -4,14 +4,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class NewConnectionUser extends StatefulWidget {
-  const NewConnectionUser({super.key});
+class SettingsPageUser extends StatefulWidget {
+  const SettingsPageUser({super.key});
 
   @override
-  State<NewConnectionUser> createState() => _NewConnectionUserState();
+  State<SettingsPageUser> createState() => _SettingsPageUserState();
 }
 
-class _NewConnectionUserState extends State<NewConnectionUser> {
+class _SettingsPageUserState extends State<SettingsPageUser> {
   final TextEditingController _flatNoController = TextEditingController();
   final TextEditingController _streetController = TextEditingController();
   final TextEditingController _placeController = TextEditingController();
@@ -31,7 +31,7 @@ class _NewConnectionUserState extends State<NewConnectionUser> {
               Row(
                 children: [
                   Text(
-                    " Enter the details:",
+                    " Vehicle Insurance",
                     style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
                   ),
                 ],
@@ -53,8 +53,8 @@ class _NewConnectionUserState extends State<NewConnectionUser> {
                         controller: _flatNoController,
                         decoration: InputDecoration(
                           contentPadding: EdgeInsets.symmetric(vertical: 24),
-                          labelText: "Flat NO",
-                          prefixIcon: Icon(Icons.numbers_outlined),
+                          labelText: "Name",
+                          prefixIcon: Icon(Icons.drive_file_rename_outline),
                           labelStyle: TextStyle(fontWeight: FontWeight.w600),
                           border: OutlineInputBorder(
                             borderSide:
@@ -96,7 +96,7 @@ class _NewConnectionUserState extends State<NewConnectionUser> {
                         controller: _streetController,
                         decoration: InputDecoration(
                           contentPadding: EdgeInsets.symmetric(vertical: 24),
-                          labelText: "Street",
+                          labelText: "Vehicle Type",
                           prefixIcon: Icon(Icons.streetview),
                           labelStyle: TextStyle(fontWeight: FontWeight.w600),
                           border: OutlineInputBorder(
@@ -139,8 +139,8 @@ class _NewConnectionUserState extends State<NewConnectionUser> {
                         controller: _placeController,
                         decoration: InputDecoration(
                           contentPadding: EdgeInsets.symmetric(vertical: 24),
-                          labelText: "Place",
-                          prefixIcon: Icon(Icons.place),
+                          labelText: "Brand/Model",
+                          prefixIcon: Icon(Icons.model_training),
                           labelStyle: TextStyle(fontWeight: FontWeight.w600),
                           border: OutlineInputBorder(
                             borderSide:
@@ -182,8 +182,8 @@ class _NewConnectionUserState extends State<NewConnectionUser> {
                         controller: _phoneController,
                         decoration: InputDecoration(
                           contentPadding: EdgeInsets.symmetric(vertical: 24),
-                          labelText: "Phone No",
-                          prefixIcon: Icon(Icons.phone),
+                          labelText: "Vehicle Number",
+                          prefixIcon: Icon(Icons.pedal_bike_rounded),
                           labelStyle: TextStyle(fontWeight: FontWeight.w600),
                           border: OutlineInputBorder(
                             borderSide:

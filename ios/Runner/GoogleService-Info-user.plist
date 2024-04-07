@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.reservoirStartuptn.RunnerTests</string>
+	<string>com.example.reservoirStartuptn</string>
 	<key>PROJECT_ID</key>
 	<string>reservoir-startuptn</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:213580800543:ios:8ab9f74cd5af570fcbeb2a</string>
+	<string>1:213580800543:ios:4a74236f72225d41cbeb2a</string>
+	<key>DATABASE_URL</key>
+	<string>https://reservoir-startuptn-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 </dict>
 </plist>

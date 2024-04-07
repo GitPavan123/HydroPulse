@@ -2,8 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
-import 'package:reservoir_startuptn/Screens/Login_screen/User/forgot_password_page_user.dart';
-import 'package:reservoir_startuptn/Screens/Main_UI/UI_Components_User/bottom_nav_bar_user.dart';
+import 'package:insurance_Dapp/Screens/Login_screen/User/forgot_password_page_user.dart';
+import 'package:insurance_Dapp/Screens/Main_UI/UI_Components_User/bottom_nav_bar_user.dart';
 
 import '../../Signup_screen/User/signup_page_user.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:reservoir_startuptn/Screens/Login_screen/Technician/login_page_technician.dart';
-import 'package:reservoir_startuptn/Screens/Login_screen/User/login_page_user.dart';
+import 'package:insurance_Dapp/Screens/Login_screen/Technician/login_page_technician.dart';
+import 'package:insurance_Dapp/Screens/Login_screen/User/login_page_user.dart';
 
 class DecisionTree extends StatefulWidget {
   const DecisionTree({super.key});

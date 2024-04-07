@@ -2,14 +2,14 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
-import 'package:reservoir_startuptn/Screens/Main_UI/UI_Components_User/settings_user.dart';
+import 'package:insurance_Dapp/Screens/Main_UI/UI_Components_User/vehicle_insurance.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
-import 'Drawer_User/new_connection_user.dart';
-import 'Drawer_User/water_bill_user.dart';
+import 'Drawer_User/health_insurance.dart';
+import 'Drawer_User/insurance_stats.dart';
 import 'Drawer_User/yearly_maintenance_user.dart';
+import 'damage_prediction.dart';
 import 'map_ui_user.dart';
-import 'notice_user.dart';
 
 class NavBarUser extends StatefulWidget {
   final String email;
@@ -73,8 +73,8 @@ class _NavBarUserState extends State<NavBarUser> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 _buildBNBItem(Icons.map_outlined, 0),
-                _buildBNBItem(Icons.announcement_outlined, 1),
-                _buildBNBItem(Icons.settings_outlined, 2),
+                _buildBNBItem(Icons.car_crash_outlined, 1),
+                _buildBNBItem(Icons.car_rental_sharp, 2),
               ],
             ),
           ),
@@ -210,7 +210,7 @@ class _NavBarDrawerState extends State<NavBarDrawer> {
           ),
           ListTile(
             leading: Icon(Iconsax.empty_wallet_tick),
-            title: Text('Water Bill'),
+            title: Text('Insurance stats'),
             onTap: () {
               Navigator.push(
                 context,
@@ -274,8 +274,8 @@ class _NavBarDrawerState extends State<NavBarDrawer> {
                         style: TextStyle(color: Colors.grey),
                       ),
                       ListTile(
-                        leading: Icon(Iconsax.square_copy),
-                        title: Text('Request a conneection'),
+                        leading: Icon(Iconsax.health_copy),
+                        title: Text('Health insurance'),
                         onTap: () {
                           Navigator.push(
                             context,

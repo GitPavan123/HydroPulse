@@ -1,8 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:reservoir_startuptn/API/firebase_api.dart';
-import 'package:reservoir_startuptn/Screens/Splash_screen/splash_animation_page.dart';
+import 'package:insurance_Dapp/Screens/Main_UI/UI_Components_User/bottom_nav_bar_user.dart';
 
 import 'firebase_options.dart';
 
@@ -11,9 +10,6 @@ void main() async {
 
   // Initialize Firebase
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
-  // Initialize FCM
-  await FirebaseApi().initNotifications();
 
   runApp(MyApp());
 }
@@ -27,7 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-      home: AnimatedSplashScreen(),
+      home: NavBarUser(email: "h"),
     );
   }
 }

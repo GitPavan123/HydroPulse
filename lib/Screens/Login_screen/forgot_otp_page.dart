@@ -7,7 +7,7 @@ import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server/gmail.dart';
-import 'package:reservoir_startuptn/Screens/Login_screen/User/login_page_user.dart';
+import 'package:insurance_Dapp/Screens/Login_screen/User/login_page_user.dart';
 
 class ForgotOTP extends StatefulWidget {
   final String email;
@@ -312,7 +312,7 @@ The EcoSync Team
     final smtpServer = gmail(technicianname, password);
 
     final message = Message()
-      ..from = Address(technicianname, 'reservoir_startuptn')
+      ..from = Address(technicianname, 'insurance_Dapp')
       ..recipients.add(receiverEmail)
       ..subject = title
       ..text = description.replaceAll('[recipient email]', widget.email);

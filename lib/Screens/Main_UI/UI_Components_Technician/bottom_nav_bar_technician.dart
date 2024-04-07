@@ -2,10 +2,10 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
-import 'package:reservoir_startuptn/Screens/Main_UI/UI_Components_Technician/settings_technician.dart';
+import 'package:insurance_Dapp/Screens/Main_UI/UI_Components_Technician/settings_technician.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
-import '../UI_Components_User/Drawer_User/water_bill_user.dart';
+import '../UI_Components_User/Drawer_User/insurance_stats.dart';
 import 'Drawer_Technician/new_connection_Technician.dart';
 import 'Drawer_Technician/yearly_maintenance_technician.dart';
 import 'map_ui_technician.dart';
